@@ -1,0 +1,442 @@
+@font-face {
+  font-family: "Roboto-thin";
+  src: url('../fonts/Roboto-thin.ttf');
+}
+$color__button: #96c93d;
+@mixin button__h{
+  content: '';
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: #ffd800;
+  border-radius: 50px;
+  opacity: .5;
+  z-index: -1;
+  transform: scale(0);
+}
+
+*{
+  box-sizing: border-box;
+}
+html,body,ul,li,p{
+  margin: 0;
+  padding:0;
+}
+
+h1,h2{
+  position: relative;
+  font-family: "Roboto-thin";
+  font-size: 105px;
+  line-height: 88px;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  margin-left: 40px;
+  &:before{
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 10px;
+    display: inline-block;
+    height: 85px;
+    width: 8px;
+    background: $color__button;
+  }
+}
+
+.sl{
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}
+.section__home{
+  display: flex;
+  justify-content: flex-end;
+  color: #ffffff;
+  .slider{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    img{
+      height: 100vh;
+      width: 100vw;
+    }
+  }
+}
+.container{
+  width: 100%;
+  padding-top: 40px;
+  padding-right: 55px;
+  padding-left:40px;
+  right: 0;
+  margin-left:auto;
+}
+
+header{
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  height: 150px;
+  font-family: Roboto;
+  font-size: 24px;
+  img{
+    height: 100%;
+  }
+  .logo{
+    margin-right:auto;
+  }
+  .phone,.tongue,.burger,.request-call{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+  }
+  .request-call{
+    position: relative;
+    width: 220px;
+    background: $color__button;
+    font-size: 20px;
+    color: #000000;
+    margin-left: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 1;
+    &:before{
+      @include button__h;
+      background: $color__button;
+    }
+    &:hover:before{
+      animation: button-hover 1s ease infinite forwards;
+    }
+  }
+  .tongue{
+    margin-left:35px;
+  }
+}
+.burger{
+  display: flex;
+  flex-direction: column;
+  margin-left: 50px;
+  span{
+    height: 6px;
+    width: 40px;
+    margin-bottom: 5px;
+    background: #ffffff;
+    border-radius: 50px;
+    &:last-child{
+      margin: 0;
+    }
+  }
+}
+
+.ecology{
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-grow: 1;
+  background: url("../img/ecology_bg.png")no-repeat center bottom;
+  background-size: cover;
+  &__tabs{
+    width: 100%;
+    max-width: 1250px;
+    height: auto;
+  }
+  &__content{
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    font-family: Roboto;
+    font-size: 18px;
+    color: #ffffff;
+    img{
+      height: 100px;
+      width: auto;
+      margin-bottom: 10px;
+    }
+  }
+  &__service,&__health{
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 18px;
+    z-index: -1;
+    opacity: 0;
+    transition: all 1s linear;
+    > div {
+      max-width: 350px;
+      width: 30%;
+      p:nth-of-type(1) {
+        font-size: 32px;
+        font-family: "Roboto";
+        font-weight: 300;
+        margin-bottom: 20px;
+      }
+    }
+  }
+  &__button{
+    display: flex;
+    input{
+      display: none;
+    }
+    label{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 64px;
+      width: 240px;
+      font-family: Roboto;
+      font-size: 32px;
+      text-transform: capitalize;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+      border-radius: 24.5px;
+      background: $color__button;
+      cursor: pointer;
+      transition: all .5s linear;
+    }
+    .button__active{
+      background: transparent;
+    }
+  }
+}
+
+.advantages{
+  background: url("../img/advantages_bg.png")no-repeat center;
+  background-size: cover;
+  color: #ffffff;
+  p{
+    width: 100%;
+    max-width: 1250px;
+    height: auto;
+    font-family:"Roboto Light";
+    font-size: 27px;
+    margin-bottom: 50px;
+  }
+  &__button{
+    position: relative;
+    height: 55px;
+    width: 240px;
+    line-height: 55px;
+    background: $color__button;
+    color: #000000;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 27px;
+    text-transform: capitalize;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    z-index: 5;
+    &:before{
+      @include button__h;
+      background: $color__button;
+    }
+    &:hover:before{
+      animation: button-hover 1s ease infinite forwards;
+    }
+  }
+}
+
+.button__big{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px;
+  width: 100%;
+  max-width: 415px;
+  background: #ffd800;
+  border-radius: 50px;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 36px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  line-height: 30px;
+  letter-spacing: -0.5px;
+  &:before{
+    @include button__h;
+    background: #ffd800;
+  }
+  &:hover:before{
+    animation: button-hover 1s ease infinite forwards;
+  }
+}
+
+.button__next{
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  display: block;
+  height: 60px;
+  width: 60px;
+  transform: translateX(-50%);
+  background: url("../img/arrow.png")no-repeat center;
+  background-size: contain;
+}
+
+
+@keyframes button-hover {
+  from{
+    transform: scale(0,0);
+  }
+  to{
+    transform: scale(1.2,1.5);
+  }
+}
+
+
+//me style slick slider
+.slider-dots{
+  position: absolute;
+  bottom: 50px;
+  left:40px;
+  display: flex;
+  list-style: none;
+  button{
+    width: 43px;
+    height: 4px;
+    margin-right: 17px;
+    border: none;
+    background: #ffffff;
+    text-indent: -9999px;
+  }
+  .slick-active button{
+    background: $color__button;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .container {
+    max-width: 1580px;
+    padding-left: 0;
+  }
+  .slider-dots{
+    right: 1580px;
+    left: auto;
+    transform: translateX(100%);
+  }
+}
+@media screen and (max-width: 1580px) {
+  h1,h2{
+    font-size: 80px;
+    line-height: 1.1em;
+    margin: 0.5em 0 0.5em 40px;
+    &:before{
+      height: 65px;
+    }
+  }
+  h2{
+    margin-top:0;
+  }
+  header{
+    height: 13vh;
+  }
+  .ecology__content img{
+    height: 10vh;
+  }
+
+  ecology{
+    &__service, &__health{
+      font-size: 15px;
+      div {
+        p:nth-of-type(1){
+          font-size: 2.2vw;
+        }
+      }
+
+    }
+  }
+  .advantages p{
+    font-size: 2vw;
+  }
+
+}
+@media screen and (max-width: 1346px){
+  .burger{
+    margin-left:30px;
+  }
+  header{
+    .tongue{
+      margin-left: 20px;
+    }
+    .request-call{
+      width: 200px;
+    }
+  }
+
+}
+@media screen and (max-width: 1200px){
+  .button__next{
+    display: none;
+  }
+  .ecology__content{
+    overflow-x: auto;
+  }
+  .ecology__button{
+    padding-top: 40px;
+  }
+}
+@media screen and (max-width: 768px){
+  h1,h2{
+    font-size: 10vw;
+    margin: 0.5em 0 0.5em 20px;
+    &:before{
+      height: 9vw;
+      left: -20px;
+      top: .5vw;
+      width: 4px;
+    }
+  }
+  .first{
+    height: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .container{
+    padding:20px ;
+  }
+  header{
+    flex-wrap: wrap;
+    .request-call,.phone,.tongue{
+      display: none;
+    }
+  }
+  .button__big{
+    font-size: 22px;
+    margin: auto auto 0 auto;
+  }
+  .ecology__service, .ecology__health{
+    flex-direction: column;
+    div{
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 30px;
+    }
+  }
+  .ecology__button label{
+    width: 45%;
+    font-size: 24px;
+    padding: 10px;
+    height: 50px;
+  }
+  .advantages p{
+    font-size: 4vw;
+  }
+  .onepage-wrapper .section{
+    height: auto!important;
+  }
+  .slider-dots{
+    display: none!important;
+  }
+}

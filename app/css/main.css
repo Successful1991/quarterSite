@@ -1,0 +1,459 @@
+@font-face {
+  font-family: "Roboto-thin";
+  src: url("../fonts/Roboto-thin.ttf"); }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+html, body, ul, li, p {
+  margin: 0;
+  padding: 0; }
+
+h1, h2 {
+  position: relative;
+  font-family: "Roboto-thin";
+  font-size: 105px;
+  line-height: 88px;
+  letter-spacing: -0.5px;
+  color: #ffffff;
+  margin-left: 40px; }
+  h1:before, h2:before {
+    content: '';
+    position: absolute;
+    left: -40px;
+    top: 10px;
+    display: inline-block;
+    height: 85px;
+    width: 8px;
+    background: #96c93d; }
+
+.sl {
+  position: absolute;
+  top: 0;
+  opacity: 0; }
+
+.section__home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #ffffff; }
+  .section__home .slider {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; }
+    .section__home .slider img {
+      height: 100vh;
+      width: 100vw; }
+
+.container {
+  width: 100%;
+  padding-top: 40px;
+  padding-right: 55px;
+  padding-left: 40px;
+  right: 0;
+  margin-left: auto; }
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 150px;
+  font-family: Roboto;
+  font-size: 24px; }
+  header img {
+    height: 100%; }
+  header .logo {
+    margin-right: auto; }
+  header .phone, header .tongue, header .burger, header .request-call {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 50px; }
+  header .request-call {
+    position: relative;
+    width: 220px;
+    background: #96c93d;
+    font-size: 20px;
+    color: #000000;
+    margin-left: 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    z-index: 1; }
+    header .request-call:before {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 100%;
+      background: #ffd800;
+      border-radius: 50px;
+      opacity: .5;
+      z-index: -1;
+      -webkit-transform: scale(0);
+          -ms-transform: scale(0);
+              transform: scale(0);
+      background: #96c93d; }
+    header .request-call:hover:before {
+      -webkit-animation: button-hover 1s ease infinite forwards;
+              animation: button-hover 1s ease infinite forwards; }
+  header .tongue {
+    margin-left: 35px; }
+
+.burger {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 50px; }
+  .burger span {
+    height: 6px;
+    width: 40px;
+    margin-bottom: 5px;
+    background: #ffffff;
+    border-radius: 50px; }
+    .burger span:last-child {
+      margin: 0; }
+
+.ecology {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  background: url("../img/ecology_bg.png") no-repeat center bottom;
+  background-size: cover; }
+  .ecology__tabs {
+    width: 100%;
+    max-width: 1250px;
+    height: auto; }
+  .ecology__content {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    font-family: Roboto;
+    font-size: 18px;
+    color: #ffffff; }
+    .ecology__content img {
+      height: 100px;
+      width: auto;
+      margin-bottom: 10px; }
+  .ecology__service, .ecology__health {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    font-size: 18px;
+    z-index: -1;
+    opacity: 0;
+    -webkit-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear; }
+    .ecology__service > div, .ecology__health > div {
+      max-width: 350px;
+      width: 30%; }
+      .ecology__service > div p:nth-of-type(1), .ecology__health > div p:nth-of-type(1) {
+        font-size: 32px;
+        font-family: "Roboto";
+        font-weight: 300;
+        margin-bottom: 20px; }
+  .ecology__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; }
+    .ecology__button input {
+      display: none; }
+    .ecology__button label {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      height: 64px;
+      width: 240px;
+      font-family: Roboto;
+      font-size: 32px;
+      text-transform: capitalize;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+      border-radius: 24.5px;
+      background: #96c93d;
+      cursor: pointer;
+      -webkit-transition: all .5s linear;
+      -o-transition: all .5s linear;
+      transition: all .5s linear; }
+    .ecology__button .button__active {
+      background: transparent; }
+
+.advantages {
+  background: url("../img/advantages_bg.png") no-repeat center;
+  background-size: cover;
+  color: #ffffff; }
+  .advantages p {
+    width: 100%;
+    max-width: 1250px;
+    height: auto;
+    font-family: "Roboto Light";
+    font-size: 27px;
+    margin-bottom: 50px; }
+  .advantages__button {
+    position: relative;
+    height: 55px;
+    width: 240px;
+    line-height: 55px;
+    background: #96c93d;
+    color: #000000;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 27px;
+    text-transform: capitalize;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    z-index: 5; }
+    .advantages__button:before {
+      content: '';
+      position: absolute;
+      display: block;
+      height: 100%;
+      width: 100%;
+      background: #ffd800;
+      border-radius: 50px;
+      opacity: .5;
+      z-index: -1;
+      -webkit-transform: scale(0);
+          -ms-transform: scale(0);
+              transform: scale(0);
+      background: #96c93d; }
+    .advantages__button:hover:before {
+      -webkit-animation: button-hover 1s ease infinite forwards;
+              animation: button-hover 1s ease infinite forwards; }
+
+.button__big {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 90px;
+  width: 100%;
+  max-width: 415px;
+  background: #ffd800;
+  border-radius: 50px;
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 36px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  line-height: 30px;
+  letter-spacing: -0.5px; }
+  .button__big:before {
+    content: '';
+    position: absolute;
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #ffd800;
+    border-radius: 50px;
+    opacity: .5;
+    z-index: -1;
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+            transform: scale(0);
+    background: #ffd800; }
+  .button__big:hover:before {
+    -webkit-animation: button-hover 1s ease infinite forwards;
+            animation: button-hover 1s ease infinite forwards; }
+
+.button__next {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  display: block;
+  height: 60px;
+  width: 60px;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background: url("../img/arrow.png") no-repeat center;
+  background-size: contain; }
+
+@-webkit-keyframes button-hover {
+  from {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0); }
+  to {
+    -webkit-transform: scale(1.2, 1.5);
+            transform: scale(1.2, 1.5); } }
+
+@keyframes button-hover {
+  from {
+    -webkit-transform: scale(0, 0);
+            transform: scale(0, 0); }
+  to {
+    -webkit-transform: scale(1.2, 1.5);
+            transform: scale(1.2, 1.5); } }
+
+.slider-dots {
+  position: absolute;
+  bottom: 50px;
+  left: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none; }
+  .slider-dots button {
+    width: 43px;
+    height: 4px;
+    margin-right: 17px;
+    border: none;
+    background: #ffffff;
+    text-indent: -9999px; }
+  .slider-dots .slick-active button {
+    background: #96c93d; }
+
+@media screen and (min-width: 1600px) {
+  .container {
+    max-width: 1580px;
+    padding-left: 0; }
+  .slider-dots {
+    right: 1580px;
+    left: auto;
+    -webkit-transform: translateX(100%);
+        -ms-transform: translateX(100%);
+            transform: translateX(100%); } }
+
+@media screen and (max-width: 1580px) {
+  h1, h2 {
+    font-size: 80px;
+    line-height: 1.1em;
+    margin: 0.5em 0 0.5em 40px; }
+    h1:before, h2:before {
+      height: 65px; }
+  h2 {
+    margin-top: 0; }
+  header {
+    height: 13vh; }
+  .ecology__content img {
+    height: 10vh; }
+  ecology__service, ecology__health {
+    font-size: 15px; }
+    ecology__service div p:nth-of-type(1), ecology__health div p:nth-of-type(1) {
+      font-size: 2.2vw; }
+  .advantages p {
+    font-size: 2vw; } }
+
+@media screen and (max-width: 1346px) {
+  .burger {
+    margin-left: 30px; }
+  header .tongue {
+    margin-left: 20px; }
+  header .request-call {
+    width: 200px; } }
+
+@media screen and (max-width: 1200px) {
+  .button__next {
+    display: none; }
+  .ecology__content {
+    overflow-x: auto; }
+  .ecology__button {
+    padding-top: 40px; } }
+
+@media screen and (max-width: 768px) {
+  h1, h2 {
+    font-size: 10vw;
+    margin: 0.5em 0 0.5em 20px; }
+    h1:before, h2:before {
+      height: 9vw;
+      left: -20px;
+      top: .5vw;
+      width: 4px; }
+  .first {
+    height: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .container {
+    padding: 20px; }
+  header {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    header .request-call, header .phone, header .tongue {
+      display: none; }
+  .button__big {
+    font-size: 22px;
+    margin: auto auto 0 auto; }
+  .ecology__service, .ecology__health {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .ecology__service div, .ecology__health div {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 30px; }
+  .ecology__button label {
+    width: 45%;
+    font-size: 24px;
+    padding: 10px;
+    height: 50px; }
+  .advantages p {
+    font-size: 4vw; }
+  .onepage-wrapper .section {
+    height: auto !important; }
+  .slider-dots {
+    display: none !important; } }
