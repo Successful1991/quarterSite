@@ -24,9 +24,11 @@ body, .onepage-wrapper, html {
 }
 .onepage-wrapper .active{
   animation: block_start 0.6s ease-out forwards;
+  z-index: 1;
 }
 .onepage-wrapper .no_active{
   animation: block_end 1s ease-out forwards;
+  z-index: 0;
 }
 @keyframes block_start {
   from{

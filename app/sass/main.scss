@@ -376,6 +376,9 @@ header{
 
 }
 @media screen and (max-width: 1200px){
+  .sl{
+    opacity: 1;
+  }
   .button__next{
     display: none;
   }

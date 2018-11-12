@@ -401,6 +401,8 @@ header {
     width: 200px; } }
 
 @media screen and (max-width: 1200px) {
+  .sl {
+    opacity: 1; }
   .button__next {
     display: none; }
   .ecology__content {
