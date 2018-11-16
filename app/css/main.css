@@ -195,6 +195,11 @@ header {
         font-family: "Roboto";
         font-weight: 300;
         margin-bottom: 20px; }
+  .ecology__service img {
+    -webkit-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+            transform: rotate(90deg);
+    width: 10vh; }
   .ecology__button {
     display: -webkit-box;
     display: -ms-flexbox;

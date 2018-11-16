@@ -180,6 +180,10 @@ header{
       }
     }
   }
+  &__service img{
+    transform: rotate(90deg);
+    width: 10vh;
+  }
   &__button{
     display: flex;
     input{
