@@ -23,8 +23,8 @@ body, .onepage-wrapper, html {
   -webkit-transform-style: preserve-3d;
 }
 .onepage-wrapper .active{
-  animation: block_start 0.6s ease-out forwards;
-  z-index: 1;
+  animation: block_start 0.5s ease-out forwards;
+  z-index: 3;
 }
 .onepage-wrapper .no_active{
   animation: block_end 1s ease-out forwards;

@@ -87,7 +87,7 @@
         total = sections.length,
         status = "off",
         topPos = 0,
-        leftPos = 0,
+        //leftPos = 0,
         lastAnimation = 0,
         quietPeriod = 500,
         paginationList = "";
